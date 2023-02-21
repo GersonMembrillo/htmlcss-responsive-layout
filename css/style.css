@@ -24,6 +24,8 @@ body{
 
 .container{
   padding: 15px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 #planning, #features, #call-to-action{
@@ -39,10 +41,47 @@ a{
   text-decoration: none;
 }
 
+img{
+  width: 100%;
+}
+
+p{
+  line-height: 1.8;
+}
+
 /* utilities */
 
 .text-center {
   text-align: center;
+}
+
+.button-little{
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.button{
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+.button-big{
+  padding: 15px 50px;
+  border-radius: 30px;
+  background-color: var(--main-color);
+  color: var(--purple-color);
+}
+
+.padding{
+  padding: 30px 0px;
+}
+
+.p-top{
+  padding-top: 30px;
+}
+
+.p-bottom{
+  padding-bottom: 30px;
 }
 
 /* header */
@@ -71,6 +110,16 @@ header nav ul{
   color: var(--main-color);
 }
 
+header .button-little{
+  background-color: var(--main-color);
+  color: var(--dark-color);
+}
+
+header nav img{
+  height: 50px;
+  width: auto;
+}
+
 /* MAIN */
 
 /* intro */
@@ -85,6 +134,24 @@ main{
 color: var(--dark-color);
 border-radius: 20px;
 margin-bottom: 10px;
+padding: 30px;
+}
+
+#intro .container:first-child{
+  padding-bottom: 0;
+}
+
+#intro h3, #intro i{
+  color: var(--secondary-color);
+}
+
+#intro .button, #intro .fa-brands.fa-apple{
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
+#intro .text-center i{
+  font-size: 3rem;
 }
 
 .card-right img{
@@ -93,10 +160,19 @@ margin-bottom: 10px;
 
 /* planning */
 
+
 .right-planning{
   background-color: var(--main-color);
   color: var(--dark-color);
-  border-radius: 20px;
+  border-radius: 40px;
+  padding: 30px;
+}
+
+.right-planning a{
+  background-color: var(--purple-color);
+  color: var(--dark-color);
+  padding: 5px 9px;
+  border-radius: 50%;
 }
 
 /* testimonials */
@@ -104,8 +180,23 @@ margin-bottom: 10px;
 .testimonial-card{
   background-color: var(--purple-color);
   color: var(--main-color);
-border-radius: 20px;
+border-radius: 40px;
 margin-bottom: 10px;
+padding: 30px;
+}
+
+.testimonial-image{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.testimonial-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* features */
@@ -115,10 +206,41 @@ margin-bottom: 10px;
       color: var(--purple-color);
       border-radius: 20px;
       margin-bottom: 10px;
+      padding: 30px;
+}
+
+.feature-card p{
+  color: var(--dark-color);
+}
+
+.feature-card h3{
+  padding: 10px 0px;
+}
+
+.feature-card a, .us-right-card a{
+  background-color: var(--purple-color);
+  color: var(--main-color);
+}
+
+/* about us */
+
+.us-right-card h3, .us-left-card h2, #testimonials .container h2{
+  color: var(--purple-color);
 }
 
 .us-left-card p{
   margin-bottom: 10px;
+}
+
+/* call to action */
+
+#call-to-action h1{
+  color: var(--contrast-color);
+}
+
+#call-to-action .padding a{
+  text-decoration: underline;
+  color: var(--main-color);
 }
 
 /* FOOTER */
@@ -128,7 +250,17 @@ footer{
   color: var(--main-color);
 }
 
+footer a{
+  text-decoration: underline;
+  color: var(--purple-color);
+}
+
 @media screen and (min-width: 768px) {
+
+    .container {
+        max-width: 750px;
+        margin: 0 auto;
+      }
 
   nav .fa-solid.fa-bars{
     display: none;
@@ -152,6 +284,10 @@ footer{
     width: calc((100% / 3 * 2) - 10px)
   }
 
+  /* testimonials */
+
+  .testimonial-card{}
+
 /* features */
 
 .feature-card{
@@ -161,11 +297,11 @@ footer{
   /* about us */
 
 .us-left-card{
-  width: calc(60% - 10px);
+  width: calc(70% - 10px);
 }
 
 .us-right-card{
-  width: 40%;
+  width: 30%;
 }
 
 /* call to action */
@@ -176,7 +312,7 @@ footer{
 @media screen and (min-width: 992px){
 
   .container{
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -201,4 +337,11 @@ footer{
 .feature-card {
   width: calc((100% / 3) - 10px);
 }
+}
+
+@media screen and (max-width: 1200px){
+
+  .container{
+    width: 1140px;
+  }
 }
