@@ -102,6 +102,10 @@ header nav{
   align-items: center;
 }
 
+header a{
+  color: var(--main-color);
+}
+
 header nav ul{
   display: none;
 }
@@ -173,6 +177,7 @@ padding: 30px;
   color: var(--dark-color);
   padding: 5px 9px;
   border-radius: 50%;
+  text-align: center;
 }
 
 /* testimonials */
@@ -238,6 +243,15 @@ padding: 30px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
+  position: relative;
+}
+
+.us-image span{
+  position: absolute;
+  color: var(--purple-color);
+  top: 0;
+  right: 0;
+  size: 5rem;
 }
 
 /* call to action */
@@ -249,6 +263,11 @@ padding: 30px;
 #call-to-action .padding a{
   text-decoration: underline;
   color: var(--main-color);
+}
+
+.call-description{
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 /* FOOTER */
@@ -270,14 +289,6 @@ footer a{
         margin: 0 auto;
       }
 
-  /* nav .fa-solid.fa-bars{
-    display: none;
-  }
-
-    header nav ul {
-      display: flex;
-    } */
-
   .d-flex{
     display: flex;
     flex-flow: row wrap;
@@ -296,6 +307,7 @@ footer a{
 
   .testimonial-card{
     display: flex;
+    align-items: center;
     padding: 15px;
   }
 
@@ -305,12 +317,8 @@ footer a{
 
   .testimonial-text{
     width: 70%;
-  }
-
-  .testimonial-text{
     text-align: left;
-    vertical-align: center;
-    padding: 20px;
+        padding: 20px;
   }
 
 /* features */
@@ -348,4 +356,91 @@ footer a{
   font-size: 4em;
 }
 
+.call-description {
+  max-width: 600px;
+  margin: 0 auto;
+}
   }
+
+@media screen and (min-width: 998px){
+
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.fa-solid.fa-bars{
+    display: none;
+  }
+
+    header nav ul {
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 30px;
+    }
+
+
+
+
+/* intro */
+
+.card-div{
+  display: flex;
+}
+
+.card-left, .card-right{
+  width: calc(50% - 10px);
+}
+
+/* planning */
+
+.container-planning {
+  display: flex;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.left-planning, .right-planning{
+  width: calc(50% - 10px);
+}
+
+.left-planning{
+  padding: 30px;
+}
+
+/* testimonials */
+
+    .testimonial-image {
+      width: 22%;
+    }
+
+    .testimonial-text {
+      width: 78%;
+    }
+
+/* features */
+
+.feature-card{
+  width: calc((100% / 3) - 10px);
+}
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  .container {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+            .testimonial-image {
+              width: 18%;
+            }
+
+            .testimonial-text {
+              width: 82%;
+            }
+}
